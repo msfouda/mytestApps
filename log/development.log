@@ -1,0 +1,171 @@
+Started GET "/" for ::1 at 2017-04-23 23:00:53 +0200
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 579ms (Views: 567.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/goodbye" for ::1 at 2017-04-23 23:01:35 +0200
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for ::1 at 2017-04-23 23:01:40 +0200
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1685ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for ::1 at 2017-04-23 23:01:47 +0200
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1225ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index?looking_for=css" for ::1 at 2017-04-23 23:01:52 +0200
+Processing by CoursesController#index as HTML
+  Parameters: {"looking_for"=>"css"}
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1655ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index?looking_for=css" for ::1 at 2017-04-23 23:01:56 +0200
+Processing by CoursesController#index as HTML
+  Parameters: {"looking_for"=>"css"}
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1546ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index?looking_for=reactjs" for ::1 at 2017-04-23 23:02:07 +0200
+Processing by CoursesController#index as HTML
+  Parameters: {"looking_for"=>"reactjs"}
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 1211ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6: 		<th>Name</th>
+     7: 		<th>Description</th>
+     8: 	</tr>
+     9: 	<% @courses.each do |course| %>
+    10: 	<tr class=<%= cycle('even', 'odd')%>>
+    11: 		<td><%= image_tag(course["smallIcon"]) %></td>
+    12: 		<td><%= course["name"] %></td>
+  
+app/views/courses/index.html.erb:9:in `_app_views_courses_index_html_erb___3908745622016580674_70286535790000'
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.2ms)
+Started GET "/courses/index?looking_for=reactjs" for ::1 at 2017-04-23 23:02:13 +0200
+Processing by CoursesController#index as HTML
+  Parameters: {"looking_for"=>"reactjs"}
+Started GET "/courses/index?looking_for=react" for ::1 at 2017-04-23 23:02:14 +0200
+Processing by CoursesController#index as HTML
+  Parameters: {"looking_for"=>"react"}
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 1240ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6: 		<th>Name</th>
+     7: 		<th>Description</th>
+     8: 	</tr>
+     9: 	<% @courses.each do |course| %>
+    10: 	<tr class=<%= cycle('even', 'odd')%>>
+    11: 		<td><%= image_tag(course["smallIcon"]) %></td>
+    12: 		<td><%= course["name"] %></td>
+  
+app/views/courses/index.html.erb:9:in `_app_views_courses_index_html_erb___3908745622016580674_70286501282200'
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sobhi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.0ms)
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1378ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index?looking_for=css" for ::1 at 2017-04-23 23:02:26 +0200
+Processing by CoursesController#index as HTML
+  Parameters: {"looking_for"=>"css"}
+Started GET "/courses/index" for ::1 at 2017-04-23 23:02:27 +0200
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 878ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 688ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-23 23:02:29 +0200
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/index" for ::1 at 2017-04-23 23:02:30 +0200
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2577ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/goodbye" for ::1 at 2017-04-23 23:02:44 +0200
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/goodbye" for ::1 at 2017-04-23 23:02:46 +0200
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/goodbye" for ::1 at 2017-04-23 23:02:49 +0200
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/index" for ::1 at 2017-04-23 23:02:56 +0200
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1370ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/index?looking_for=grilled" for ::1 at 2017-04-23 23:03:53 +0200
+Processing by RecipesController#index as HTML
+  Parameters: {"looking_for"=>"grilled"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2901ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
